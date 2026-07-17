@@ -1,7 +1,3 @@
-# 大型媒体文件 - 不适合版本管理
-video/
-audio/
-
 # 操作系统生成文件
 .DS_Store
 Thumbs.db
