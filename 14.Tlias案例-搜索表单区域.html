@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tlias智能学习辅助系统</title>
+    <style>
+        /* ========== 顶部导航栏 ========== */
+        /* 顶部导航栏容器 */
+        .top-navbar {
+            background-color: #b5b3b3;      /* 灰色背景 */
+
+            display: flex;                    /* 弹性布局，让标题和链接在同一行 */
+            justify-content: space-between;   /* 两端对齐：标题居左，链接居右 */
+
+            align-items: center;              /* 垂直居中 */
+            padding: 12px 24px;               /* 上下12px，左右24px 内边距 */
+        }
+
+        /* 顶部导航栏标题 */
+        .top-navbar .title {
+            font-weight: bold;                /* 加粗 */
+            font-size: 30px;
+            color: white;                   /* 白色字体 */
+            font-family: KaiTi, sans-serif;  /* 设置字体为楷体 */
+        }
+
+        /* 注销链接样式 */
+        .top-navbar .logout-link {
+            color: white;                   /* 白色字体 */
+            text-decoration: none;            /* 去掉默认下划线 */
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .top-navbar .logout-link:hover {
+            text-decoration: underline;       /* 悬停时显示下划线 */
+        }
+
+        /* ========== 搜索表单区域 ========== */
+        .search-form-area {
+            background-color: #f5f5f5;       /* 区域背景色 */
+            padding: 18px 24px;              /* 区域内边距 */
+            margin: 20px 0;                  /* 上下外边距 */
+        }
+
+        /* 搜索表单布局 */
+        .search-form {
+            display: flex;
+            align-items: center;
+            gap: 90px;                       /* 表单项之间的间距 */
+            flex-wrap: wrap;                 /* 超出时换行 */
+        }
+
+        /* 表单标签和输入元素排列 */
+        .search-form label {
+            display: flex;
+            align-items: center;
+            gap: 8px;                        /* 标签文本与输入框之间的间距 */
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* 文本输入框和下拉选择框样式 */
+        .search-form input,
+        .search-form select {
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            min-width: 360px;
+        }
+
+        /* 按钮组布局 */
+        .search-form .button-row {
+            display: flex;
+            gap: 25px;
+        }
+
+        .search-form button {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .search-form button.search-button {
+            background-color: #4a90e2;
+            color: white;
+        }
+
+        .search-form button.reset-button {
+            background-color: #e0e0e0;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== Part 1: 顶部导航栏 ========== -->
+    <header class="top-navbar">
+        <span class="title">Tlias 智能学习辅助系统</span>
+        <a href="#" class="logout-link">退出登录</a>
+    </header>
+
+    <!-- ========== Part 2: 搜索表单区域 ========== -->
+    <section class="search-form-area">
+        <form class="search-form" action="/search" method="post">
+            <label>
+                <span>姓名</span>
+                <input type="text" name="name" placeholder="请输入姓名" />
+            </label>
+            <label>
+                <span>性别</span>
+                <select name="gender">
+                    <option value="">请选择</option>
+                    <option value="1">男</option>
+                    <option value="2">女</option>
+                </select>
+            </label>
+            <label>
+                <span>职位</span>
+                <select name="position">
+                    <option value="">请选择</option>
+                    <option value="1">班主任</option>
+                    <option value="2">讲师</option>
+                    <option value="3">学工主管</option>
+                    <option value="4">教研主管</option>
+                    <option value="5">咨询师</option>
+                </select>
+            </label>
+            <div class="button-row">
+                <button type="submit" class="search-button">查询</button>
+                <button type="reset" class="reset-button">清空</button>
+            </div>
+        </form>
+    </section>
+
+</body>
+</html>

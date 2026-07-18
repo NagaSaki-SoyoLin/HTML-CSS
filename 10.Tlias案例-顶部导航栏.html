@@ -1,11 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tlias智能学习辅助系统</title>
+    <style>
+        /* ========== 顶部导航栏 ========== */
+        .top-navbar {
+            background-color: #b5b3b3;      /* 灰色背景 */
+
+            display: flex;                    /* 弹性布局，让标题和链接在同一行 */
+            justify-content: space-between;   /* 两端对齐：标题居左，链接居右 */
+
+            align-items: center;              /* 垂直居中 */
+            padding: 12px 24px;               /* 上下12px，左右24px 内边距 */
+        }
+
+        .top-navbar .title {
+            font-weight: bold;                /* 加粗 */
+            font-size: 30px;
+            color: white;                   /* 白色字体 */
+            /* 设置字体为楷体 */
+            font-family: KaiTi, sans-serif;
+        }
+
+        .top-navbar .logout-link {
+            color: white;                   /* 白色字体 */
+            text-decoration: none;            /* 去掉默认下划线 */
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .top-navbar .logout-link:hover {
+            text-decoration: underline;       /* 悬停时显示下划线 */
+        }
+    </style>
 </head>
 <body>
-    
+
+    <!-- ========== Part 1: 顶部导航栏 ========== -->
+    <header class="top-navbar">
+        <span class="title">Tlias 智能学习辅助系统</span>
+        <a href="#" class="logout-link">退出登录</a>
+    </header>
+
 </body>
 </html>
